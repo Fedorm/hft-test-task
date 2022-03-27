@@ -1,0 +1,21 @@
+name: Java CI
+
+on: [ push ]
+
+jobs:
+  all-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        run: docker load --input app/todo-app.tar
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Build with Gradle
+        run: ./gradlew test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: all-tests
+          path: build/allure-results

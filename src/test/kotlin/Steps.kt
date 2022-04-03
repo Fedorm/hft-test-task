@@ -5,6 +5,7 @@ import io.qameta.allure.Step
 import io.restassured.RestAssured.given
 import io.restassured.builder.RequestSpecBuilder
 import io.restassured.http.ContentType
+import io.restassured.response.Response
 import io.restassured.specification.RequestSpecification
 import org.apache.http.HttpStatus
 import org.assertj.core.api.SoftAssertions
@@ -31,11 +32,22 @@ class Steps {
         softAssertion.assertThat(getListCurrentTodos()).isEmpty()
     }
 
-    @Step("POST /todos and create one TODO task")
-    fun createTodo(todoDto: TodoDto) {
-        given(requestSpec()).body(todoDto).post()
-            .then().statusCode(HttpStatus.SC_CREATED)
+    @Step("Check that requested TODO list is empty")
+    fun checkRequestedTodoIsEmpty(requestedTodo: MutableList<TodoDto>) {
+        softAssertion.assertThat(requestedTodo).isEmpty()
     }
+
+    @Step("POST /todos create one TODO task and check 201 status")
+    fun createTodoAndCheckStatus(todoDto: TodoDto) {
+        privateCreateTodo(todoDto).then().statusCode(HttpStatus.SC_CREATED)
+    }
+
+    @Step("POST /todos create one TODO task")
+    fun createTodo(todoDto: TodoDto): Response? {
+        return privateCreateTodo(todoDto)
+    }
+
+    private fun privateCreateTodo(todoDto: TodoDto) = given(requestSpec()).body(todoDto).post()
 
     @Step("DELETE /todos by id")
     fun deleteTodoById(id: Long) {
@@ -45,9 +57,10 @@ class Steps {
             .statusCode(HttpStatus.SC_NO_CONTENT)
     }
 
-    @Step("GET /todos list without limit&offset")
-    fun getListCurrentTodos(): MutableList<TodoDto> {
+    @Step("GET /todos list")
+    fun getListCurrentTodos(limit: Int = Integer.MAX_VALUE): MutableList<TodoDto> {
         return given(requestSpec())
+            .queryParam("limit", limit)
             .get().then().extract().jsonPath().getList("", TodoDto::class.java)
     }
 
@@ -67,9 +80,32 @@ class Steps {
         )
     }
 
-    @Step("PUT /todos update an existing TODO")
-    fun updateExistingTodo(previousTodo: TodoDto, updatedTodo: TodoDto) {
-        given(requestSpec()).basePath(previousTodo.id.toString()).body(updatedTodo).put().then()
-            .statusCode(HttpStatus.SC_OK)
+    @Step("PUT /todos update an existing TODO and check 200 status")
+    fun updateExistingTodoAndCheckStatus(previousTodo: TodoDto, updatedTodo: TodoDto) {
+        updateTodo(previousTodo, updatedTodo).then().statusCode(HttpStatus.SC_OK)
     }
+
+    @Step("PUT /todos update an existing TODO")
+    fun updateExistingTodo(previousTodo: TodoDto, updatedTodo: TodoDto): Response? {
+        return updateTodo(previousTodo, updatedTodo)
+    }
+
+    @Step("DELETE with non-existent path")
+    fun requestNonExistentMethod(): Response? {
+        return given(requestSpec()).delete()
+    }
+
+    @Step("POST with text content type")
+    fun brokenPostWithTextContentType(): Response {
+        val randomString = "1"
+        return given(requestSpec()!!.contentType(ContentType.TEXT)).body(randomString).post()
+    }
+
+    @Step("Check response status")
+    fun assertResponseStatus(response: Response, httpStatus: Int) {
+        softAssertion.assertThat(response.statusCode).isEqualTo(httpStatus)
+    }
+
+    private fun updateTodo(previousTodo: TodoDto, updatedTodo: TodoDto) =
+        given(requestSpec()).basePath(previousTodo.id.toString()).body(updatedTodo).put()
 }

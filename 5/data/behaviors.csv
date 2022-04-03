@@ -1,0 +1,8 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","","Add invalid values when creating TODO","0","0","2","0","0"
+"","","Check zero limit","0","0","1","0","0"
+"","","Check impossibility to change a non-existent TODO","0","0","1","0","0"
+"","","Check app catches unrealized methods","0","0","1","0","0"
+"","","Customer Scenario","0","0","1","0","0"
+"","","App works only with JSON media type","0","0","1","0","0"
+"","","Check GET with limit and offset","0","0","1","0","0"

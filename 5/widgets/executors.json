@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://Fedorm.github.io/hft-test-task",
+  "buildOrder" : 5,
+  "buildName" : "GitHub Actions Run #2086276264",
+  "buildUrl" : "https://github.com/Fedorm/hft-test-task/actions/runs/2086276264",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://Fedorm.github.io/hft-test-task/5/"
+} ]

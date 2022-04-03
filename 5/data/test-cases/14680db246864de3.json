@@ -1,0 +1,261 @@
+{
+  "uid" : "14680db246864de3",
+  "name" : "getTodoWithLimitOffset()",
+  "fullName" : "TodoRestTest.getTodoWithLimitOffset",
+  "historyId" : "314e2167da6f90c835279e163eadbf8b",
+  "time" : {
+    "start" : 1649014000222,
+    "stop" : 1649014000857,
+    "duration" : 635
+  },
+  "description" : "Create 2 TODOs Check that /GET with limit 1 and offset 1 returned SECOND Todo (not first) Clear database after test",
+  "descriptionHtml" : "<p>Create 2 TODOs Check that /GET with limit 1 and offset 1 returned SECOND Todo (not first) Clear database after test</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Create 2 TODOs Check that /GET with limit 1 and offset 1 returned SECOND Todo (not first) Clear database after test",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate TODO DTO",
+      "time" : {
+        "start" : 1649014000224,
+        "stop" : 1649014000224,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "completed",
+        "value" : "false"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /todos create one TODO task and check 201 status",
+      "time" : {
+        "start" : 1649014000224,
+        "stop" : 1649014000278,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "todoDto",
+        "value" : "TodoDto(id=45, text=77933431-8251-4f6d-bdc7-569a01e4ab51, completed=false)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Generate TODO DTO",
+      "time" : {
+        "start" : 1649014000279,
+        "stop" : 1649014000279,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "completed",
+        "value" : "false"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /todos create one TODO task and check 201 status",
+      "time" : {
+        "start" : 1649014000279,
+        "stop" : 1649014000306,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "todoDto",
+        "value" : "TodoDto(id=49, text=a94512bd-f85f-4308-bcc7-ce1c67cee0f1, completed=false)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET one from /todos with limit&offset",
+      "time" : {
+        "start" : 1649014000306,
+        "stop" : 1649014000517,
+        "duration" : 211
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "limit",
+        "value" : "1"
+      }, {
+        "name" : "offset",
+        "value" : "1"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Compare posted TODO and received one",
+      "time" : {
+        "start" : 1649014000517,
+        "stop" : 1649014000639,
+        "duration" : 122
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "firstTodo",
+        "value" : "TodoDto(id=49, text=a94512bd-f85f-4308-bcc7-ce1c67cee0f1, completed=false)"
+      }, {
+        "name" : "secondTodo",
+        "value" : "TodoDto(id=49, text=a94512bd-f85f-4308-bcc7-ce1c67cee0f1, completed=false)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "DELETE /todos by id",
+      "time" : {
+        "start" : 1649014000639,
+        "stop" : 1649014000667,
+        "duration" : 28
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "id",
+        "value" : "45"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "DELETE /todos by id",
+      "time" : {
+        "start" : 1649014000667,
+        "stop" : 1649014000681,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "id",
+        "value" : "49"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check that database is cleared",
+      "time" : {
+        "start" : 1649014000681,
+        "stop" : 1649014000856,
+        "duration" : 175
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "GET /todos list",
+        "time" : {
+          "start" : 1649014000682,
+          "stop" : 1649014000856,
+          "duration" : 174
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "limit",
+          "value" : "2147483647"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "api"
+  }, {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:TodoRestTest]/[method:getTodoWithLimitOffset()]"
+  }, {
+    "name" : "story",
+    "value" : "Check GET with limit and offset"
+  }, {
+    "name" : "host",
+    "value" : "fv-az167-1"
+  }, {
+    "name" : "thread",
+    "value" : "2540@fv-az167-1.Test worker(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testClass",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "getTodoWithLimitOffset"
+  }, {
+    "name" : "suite",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api" ]
+  },
+  "source" : "14680db246864de3.json",
+  "parameterValues" : [ ]
+}

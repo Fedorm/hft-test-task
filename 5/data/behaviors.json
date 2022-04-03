@@ -1,0 +1,137 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Check app catches unrealized methods",
+    "children" : [ {
+      "name" : "catchUnrealizedMethod()",
+      "uid" : "a65edadffc2b82b5",
+      "parentUid" : "a09799df644e5af3ca66f2b0c41ecbfb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649013995377,
+        "stop" : 1649013998371,
+        "duration" : 2994
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a09799df644e5af3ca66f2b0c41ecbfb"
+  }, {
+    "name" : "App works only with JSON media type",
+    "children" : [ {
+      "name" : "catchUnsupportedMediaType()",
+      "uid" : "7df9dd7aa7bcc6bf",
+      "parentUid" : "165a635a058fe6558af2efd964248d48",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649013998466,
+        "stop" : 1649013998547,
+        "duration" : 81
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "165a635a058fe6558af2efd964248d48"
+  }, {
+    "name" : "Check impossibility to change a non-existent TODO",
+    "children" : [ {
+      "name" : "impossibleToChangeTodo()",
+      "uid" : "d385f2072053db94",
+      "parentUid" : "9dc786f9525158055c1b9ebc26869f20",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649013998554,
+        "stop" : 1649014000000,
+        "duration" : 1446
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "9dc786f9525158055c1b9ebc26869f20"
+  }, {
+    "name" : "Check zero limit",
+    "children" : [ {
+      "name" : "getTodoWithZeroLimit()",
+      "uid" : "1a92e417d74876df",
+      "parentUid" : "7622578212f049607a5499652efefe1f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649014000007,
+        "stop" : 1649014000152,
+        "duration" : 145
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7622578212f049607a5499652efefe1f"
+  }, {
+    "name" : "Check GET with limit and offset",
+    "children" : [ {
+      "name" : "getTodoWithLimitOffset()",
+      "uid" : "14680db246864de3",
+      "parentUid" : "12cc61cbc6131fb9b97260b3be8b4097",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649014000222,
+        "stop" : 1649014000857,
+        "duration" : 635
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "12cc61cbc6131fb9b97260b3be8b4097"
+  }, {
+    "name" : "Customer Scenario",
+    "children" : [ {
+      "name" : "todoEndToEnd()",
+      "uid" : "a9e056459cd1bff2",
+      "parentUid" : "c81aa45c8859131bd03492edb2fa687e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649014000865,
+        "stop" : 1649014001021,
+        "duration" : 156
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c81aa45c8859131bd03492edb2fa687e"
+  }, {
+    "name" : "Add invalid values when creating TODO",
+    "children" : [ {
+      "name" : "[1] TodoDto(id=-1, text=0, completed=true)",
+      "uid" : "3116ff2da21312d9",
+      "parentUid" : "776539d77e7e50d61aa5fa8c486d845b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649014001050,
+        "stop" : 1649014001081,
+        "duration" : 31
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "[2] TodoDto(id=1, text=1, completed=null)",
+      "uid" : "cbeaa5a9b196a8",
+      "parentUid" : "776539d77e7e50d61aa5fa8c486d845b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649014001088,
+        "stop" : 1649014001104,
+        "duration" : 16
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "776539d77e7e50d61aa5fa8c486d845b"
+  } ],
+  "name" : "behaviors"
+}

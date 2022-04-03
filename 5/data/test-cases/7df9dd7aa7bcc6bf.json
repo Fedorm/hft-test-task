@@ -1,0 +1,114 @@
+{
+  "uid" : "7df9dd7aa7bcc6bf",
+  "name" : "catchUnsupportedMediaType()",
+  "fullName" : "TodoRestTest.catchUnsupportedMediaType",
+  "historyId" : "9f9af2bed79d04c4012ea0be85051e6e",
+  "time" : {
+    "start" : 1649013998466,
+    "stop" : 1649013998547,
+    "duration" : 81
+  },
+  "description" : "Trying to request method with text content type then app catching exception with 415 HTTP code",
+  "descriptionHtml" : "<p>Trying to request method with text content type then app catching exception with 415 HTTP code</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Trying to request method with text content type then app catching exception with 415 HTTP code",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST with text content type",
+      "time" : {
+        "start" : 1649013998468,
+        "stop" : 1649013998546,
+        "duration" : 78
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check response status",
+      "time" : {
+        "start" : 1649013998546,
+        "stop" : 1649013998546,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2b79e2de"
+      }, {
+        "name" : "httpStatus",
+        "value" : "415"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "api"
+  }, {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:TodoRestTest]/[method:catchUnsupportedMediaType()]"
+  }, {
+    "name" : "story",
+    "value" : "App works only with JSON media type"
+  }, {
+    "name" : "host",
+    "value" : "fv-az167-1"
+  }, {
+    "name" : "thread",
+    "value" : "2540@fv-az167-1.Test worker(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testClass",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "catchUnsupportedMediaType"
+  }, {
+    "name" : "suite",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api" ]
+  },
+  "source" : "7df9dd7aa7bcc6bf.json",
+  "parameterValues" : [ ]
+}

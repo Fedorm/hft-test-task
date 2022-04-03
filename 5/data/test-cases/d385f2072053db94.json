@@ -1,0 +1,225 @@
+{
+  "uid" : "d385f2072053db94",
+  "name" : "impossibleToChangeTodo()",
+  "fullName" : "TodoRestTest.impossibleToChangeTodo",
+  "historyId" : "5ab2402b2fd816b81fddb58905410cb9",
+  "time" : {
+    "start" : 1649013998554,
+    "stop" : 1649014000000,
+    "duration" : 1446
+  },
+  "description" : "Create TODO Trying to change a non-existent TODO Catch exception with 404 HTTP code Clear database after test",
+  "descriptionHtml" : "<p>Create TODO Trying to change a non-existent TODO Catch exception with 404 HTTP code Clear database after test</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Create TODO Trying to change a non-existent TODO Catch exception with 404 HTTP code Clear database after test",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate TODO DTO",
+      "time" : {
+        "start" : 1649013998554,
+        "stop" : 1649013998583,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "completed",
+        "value" : "false"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /todos create one TODO task and check 201 status",
+      "time" : {
+        "start" : 1649013998584,
+        "stop" : 1649013999306,
+        "duration" : 722
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "todoDto",
+        "value" : "TodoDto(id=99, text=da07bb04-401e-47d7-8bf6-841f5f2d03bf, completed=false)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Generate TODO DTO",
+      "time" : {
+        "start" : 1649013999306,
+        "stop" : 1649013999306,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "completed",
+        "value" : "false"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "PUT /todos update an existing TODO",
+      "time" : {
+        "start" : 1649013999306,
+        "stop" : 1649013999373,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "previousTodo",
+        "value" : "TodoDto(id=41, text=6e049a69-bd05-4bd1-aaf8-280f100d4109, completed=false)"
+      }, {
+        "name" : "updatedTodo",
+        "value" : "TodoDto(id=99, text=da07bb04-401e-47d7-8bf6-841f5f2d03bf, completed=false)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check response status",
+      "time" : {
+        "start" : 1649013999374,
+        "stop" : 1649013999374,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@66026fe1"
+      }, {
+        "name" : "httpStatus",
+        "value" : "404"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "DELETE /todos by id",
+      "time" : {
+        "start" : 1649013999374,
+        "stop" : 1649013999418,
+        "duration" : 44
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "id",
+        "value" : "99"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check that database is cleared",
+      "time" : {
+        "start" : 1649013999418,
+        "stop" : 1649013999999,
+        "duration" : 581
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "GET /todos list",
+        "time" : {
+          "start" : 1649013999418,
+          "stop" : 1649013999670,
+          "duration" : 252
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "limit",
+          "value" : "2147483647"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "api"
+  }, {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:TodoRestTest]/[method:impossibleToChangeTodo()]"
+  }, {
+    "name" : "story",
+    "value" : "Check impossibility to change a non-existent TODO"
+  }, {
+    "name" : "host",
+    "value" : "fv-az167-1"
+  }, {
+    "name" : "thread",
+    "value" : "2540@fv-az167-1.Test worker(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testClass",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "impossibleToChangeTodo"
+  }, {
+    "name" : "suite",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api" ]
+  },
+  "source" : "d385f2072053db94.json",
+  "parameterValues" : [ ]
+}

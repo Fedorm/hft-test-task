@@ -1,0 +1,117 @@
+{
+  "uid" : "3116ff2da21312d9",
+  "name" : "[1] TodoDto(id=-1, text=0, completed=true)",
+  "fullName" : "TodoRestTest.parameterizedInvalidValues",
+  "historyId" : "4c453860a715e7fddb8cdbcb02afa2c0",
+  "time" : {
+    "start" : 1649014001050,
+    "stop" : 1649014001081,
+    "duration" : 31
+  },
+  "description" : "Trying to add invalid values to POST method and check bad request exception",
+  "descriptionHtml" : "<p>Trying to add invalid values to POST method and check bad request exception</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Trying to add invalid values to POST method and check bad request exception",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /todos create one TODO task",
+      "time" : {
+        "start" : 1649014001066,
+        "stop" : 1649014001079,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "todoDto",
+        "value" : "TodoDto(id=-1, text=0, completed=true)"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check response status",
+      "time" : {
+        "start" : 1649014001079,
+        "stop" : 1649014001079,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@4315a7fb"
+      }, {
+        "name" : "httpStatus",
+        "value" : "400"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "api"
+  }, {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:TodoRestTest]/[test-template:parameterizedInvalidValues(dto.TodoDto)]/[test-template-invocation:#1]"
+  }, {
+    "name" : "story",
+    "value" : "Add invalid values when creating TODO"
+  }, {
+    "name" : "host",
+    "value" : "fv-az167-1"
+  }, {
+    "name" : "thread",
+    "value" : "2540@fv-az167-1.Test worker(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testClass",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "parameterizedInvalidValues"
+  }, {
+    "name" : "suite",
+    "value" : "TodoRestTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "api" ]
+  },
+  "source" : "3116ff2da21312d9.json",
+  "parameterValues" : [ ]
+}
